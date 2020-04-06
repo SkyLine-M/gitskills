@@ -52,7 +52,7 @@ class JpaApplicationTests {
         //每页显示数量
         int pageSize = 2;
 
-        //1：定义分页对象
+        //1：定义分页对象 s
         //Pageable pageable = PageRequest.of(pageNow-1, pageSize);  //没有排序
         //@1：当前页码  @2：每页显示数量  @3：排序方向  @4：排序属性名称
         Pageable pageable = PageRequest.of(pageNow - 1, pageSize, Sort.Direction.ASC, "id");  //用PageRequest接收也可以

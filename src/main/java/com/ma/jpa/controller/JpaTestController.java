@@ -1,5 +1,7 @@
 package com.ma.jpa.controller;
 
+import com.ma.jpa.bean.JpaPageTemplateBean;
+import com.ma.jpa.bean.ResultTemplateBean;
 import com.ma.jpa.entity.TUser;
 import com.ma.jpa.service.JpaTestService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,5 +27,14 @@ public class JpaTestController {
     @PostMapping("jpaTest")
     public TUser findPhoneNumberRuleById(@RequestBody Map<String,Object> map){
         return jpaTestService.findPhoneNumberRuleById(map);
+    };
+
+    @PostMapping("resultTemplateBeanTest")
+    public ResultTemplateBean resultTemplateBeanTest(@RequestBody Map<String,Object> map){
+        return jpaTestService.resultTemplateBeanTest(map);
+    };
+    @PostMapping("jpaPageTemplateBeanTest")
+    public ResultTemplateBean jpaPageTemplateBeanTest(@RequestBody Map<String,Object> map){
+        return jpaTestService.jpaPageTemplateBeanTest(map);
     };
 }

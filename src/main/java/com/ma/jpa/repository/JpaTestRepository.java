@@ -36,4 +36,6 @@ public interface JpaTestRepository extends JpaRepository<TUser,Integer>, JpaSpec
     @Modifying
     @Query("delete from TUser where name = ?1")
     int deleteUser(String name);
+
+
 }
